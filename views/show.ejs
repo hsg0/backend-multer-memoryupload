@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Images</title>
+</head>
+<body>
+    <% if (files && files.length > 0) { %>
+        <% files.forEach(file => { %>
+            <img src="data:image/png;base64,<%= file.image.toString('base64') %>" style="width: 200px;" alt="Uploaded Image">
+        <% }); %>
+    <% } else { %>
+        <p>No images available.</p>
+    <% } %>
+</body>
+</html>
